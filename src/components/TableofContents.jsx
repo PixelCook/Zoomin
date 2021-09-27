@@ -4,7 +4,7 @@ import { Paper } from "@material-ui/core";
 const TableofContents = (props) => {
   return (
     <>
-      <Paper className="paper">
+      <Paper className="paper toc">
         <h2>Titles</h2>
         {props.movies.map((movie, index) => (
           <div onClick={() => props.handleDetail(index)} key={movie.title} className="title_list">

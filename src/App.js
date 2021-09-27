@@ -10,11 +10,10 @@ import { useCookies } from "react-cookie";
 function App() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [index, setIndex] = useState();
+  const [index, setIndex] = useState(-1);
   const [cookies, setCookie] = useCookies(['favorites']);
   const [favorites, setFavorites] = useState([]);
 
-  console.log(cookies)
   useEffect(() => {
     fetchData("https://swapi.dev/api/films").then((response) => {
       setLoading(false);
@@ -43,12 +42,11 @@ function App() {
   }
 
   const removeFavorite = (i) => {
-    if(!favorites.includes(i)){
-      return
-    }
-    setFavorites(favorites.filter((index)=>{
-      return index !== i
-    }))
+    if(favorites.includes(i)){
+      setFavorites(favorites.filter((index)=>{
+        return index !== i
+      }))
+    } 
   }
 
   const handleCookie = () => {
