@@ -1,0 +1,123 @@
+body{
+  background-color: black;
+  font-family: 'Press Start 2P', cursive;
+
+}
+h1, h2, h3{
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+p{
+  color: #FFCE0A;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  font-size: 12px;
+
+}
+
+
+.main_div{
+  background-image: url("https://i.imgur.com/kps1C.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: auto;
+  margin: auto;
+}
+
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.paper{
+  background-color: #00000038 !important;
+  border: solid white 2px;
+  padding: 1rem;
+}
+
+.title_list{
+  color: white;
+  padding: 5px 0px;
+}
+
+.title_list:hover{
+  background-color: rgba(255, 255, 255, 0.288);
+}
+
+.details{
+  overflow: auto;
+  max-height: 65vh;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+}
+
+.button_div{
+  display: flex;
+}
+
+.c3po, .vader{
+  display: flex;
+  justify-content: center;
+  background: none;
+  margin: auto;
+  color: white;
+  border-radius: 90px;
+  width: 10%;
+  border: none;
+  box-shadow: none;
+  text-decoration: none;
+  
+}
+
+.c3po img{
+  width: 100%;
+  filter: invert(100%) sepia(8%) saturate(92%) hue-rotate(
+85deg
+) brightness(115%) contrast(100%);
+transition-duration: .5s;
+};
+
+.c3po:active img{
+  filter: invert(94%) sepia(36%) saturate(6932%) hue-rotate(306deg) brightness(121%) contrast(94%);}
+
+.c3po:hover img{
+  filter: invert(90%) sepia(25%) saturate(3950%) hue-rotate(350deg) brightness(101%) contrast(102%);}
+
+.vader img{
+  width: 80%;
+  filter: invert(100%) sepia(0%) saturate(7463%) hue-rotate(306deg) brightness(121%) contrast(100%);
+  transition-duration: .5s;
+
+}
+
+.vader:hover img {
+  filter: invert(21%) sepia(99%) saturate(6514%) hue-rotate(2deg) brightness(101%) contrast(113%);
+}
+
+.favorite{
+  color: #FFCE0A;
+  font-size: 15px;
+}
+
+
+@media only screen and (max-width: 768px) {
+h2{
+  font-size: 90%;
+}
+h3{
+  font-size: 70%;
+}
+.c3po, .vader{
+  width: 30%;
+}
+.favorite{
+  font-size: 10px;
+}
+}
